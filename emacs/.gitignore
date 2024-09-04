@@ -1,0 +1,8 @@
+.hist
+.lsp-session*
+.mc-lists.el
+places
+recentf
+elpa/
+eln-cache/
+auto-save-list/
