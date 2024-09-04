@@ -6,7 +6,8 @@ import os
 def get_link_targets() -> list[tuple[str, str]]:
     return [
         ("emacs", "~/.config/"),
-        ("alacritty", "~/.config"),
+        ("alacritty", "~/.config/"),
+        ("bash/rc.bash", "~/.bashrc"),
     ]
 
 def symlink(source: str, target: str) -> tuple[bool, str]:
