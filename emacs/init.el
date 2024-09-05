@@ -146,6 +146,8 @@
 (use-package yasnippet :ensure t)
 (yas-global-mode 1)
 
+(use-package markdown-mode :ensure t)
+
 (add-to-list 'load-path (concat user-emacs-directory "/external/lsp-bridge"))
 (require 'lsp-bridge)
 (global-lsp-bridge-mode)
