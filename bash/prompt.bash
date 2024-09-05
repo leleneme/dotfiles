@@ -6,13 +6,12 @@ else
 fi
 
 _PROMPT_COLOR="\e[0;36m"
-RESET=`tput sgr0`
-GREEN=`tput setaf 2`
-GREEN2=`tput setaf 108`
-BLUE1=`tput setaf 111`
-BLUE2=`tput setaf 85`
+RESET="\[`tput sgr0`\]"
+GREEN="\[`tput setaf 108`\]"
+BLUE1="\[`tput setaf 111`\]"
+BLUE2="\[`tput setaf 85`\]"
 
-PS1="\n${BLUE1}\u@\h ${GREEN2}\w ${BLUE2}\$(get_git_branch)\n${RESET}$ "
+PS1="\n${BLUE1}\u@\h ${GREEN}\w ${BLUE2}\$(get_git_branch)\n${RESET}$ "
 
 __MAGENTA="\e[0;95m"
 __GREEN="\e[0;92m"
