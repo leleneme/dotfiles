@@ -47,7 +47,6 @@
 (setq-default indent-tabs-mode nil)  ; always use space!
 (setq-default truncate-lines t)
 
-
 (setq make-backup-files nil) ; disable backups, fuck it
 (setq ring-bell-function 'ignore)
 (setq inhibit-startup-screen t)
@@ -273,7 +272,7 @@
  '(lsp-bridge-python-lsp-server "pyright")
  '(lua-prefix-key "C-c")
  '(package-selected-packages
-   '(vterm windresize neotree which-key counsel swiper ivy smooth-scrolling doom-modeline pulsar multiple-cursors yasnippet markdown-mode doom-themes))
+   '(rust-mode meson-mode lua-mode swift-mode vterm windresize neotree which-key counsel swiper ivy smooth-scrolling doom-modeline pulsar multiple-cursors yasnippet markdown-mode doom-themes))
  '(typescript-indent-level 2))
  '(package-selected-packages
    '(ocaml-ts-mode zig-mode python-black fennel-mode fsharp-mode typescript-mode haskell-mode glsl-mode windresize emacs-neotree lua-mode go-mode rust-mode catppuccin catppuccin-theme ini-mode counsel swiper multiple-cursors meson-mode vterm ivy-prescient ivy-prescient-mode pulsar doom-themes ivy which-key doom-modeline smooth-scrolling))
