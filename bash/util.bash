@@ -3,6 +3,12 @@ alias ls='ls --color=auto'
 alias ll='ls --color=auto -l'
 alias grep='grep --color=auto'
 
+alias em='emacsclient -c -a ""'
+alias emd='em & disown'
+
+alias sctl='systemctl'
+alias uctl='systemctl --user'
+
 if ! [ -x "$(command -v doas)" ]; then
     # doas is not installed, so we alias it to sudo
     alias doas='sudo'
