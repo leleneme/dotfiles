@@ -106,6 +106,9 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
+;; Make yes-or-no into y-or-n
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; Make windmove use the Meta key
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings 'meta))
@@ -182,10 +185,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EXTERNAL PACKAGES
 (setq use-package-always-ensure t)
-
-(use-package yascroll)
-(setq yascroll:delay-to-hide 1)
-(global-yascroll-bar-mode 1)
 
 (use-package helpful)
 (global-set-key (kbd "C-h f") 'helpful-callable)
@@ -277,6 +276,8 @@
 (use-package windresize)
 (use-package vterm)
 
+(add-hook 'vterm-mode-hook (lambda () (setq-local global-hl-line-mode nil)))
+
 (use-package dashboard
   :config
   (dashboard-setup-startup-hook))
@@ -347,7 +348,7 @@
  '(lsp-bridge-python-lsp-server "pyright")
  '(lua-prefix-key "C-c")
  '(package-selected-packages
-   '(yascroll meson-mode rust-mode lua-mode dashboard vterm windresize neotree which-key counsel swiper ivy smooth-scrolling doom-modeline rainbow-mode pulsar move-text multiple-cursors markdown-mode yasnippet helpful doom-themes)))
+   '(meson-mode rust-mode lua-mode dashboard vterm windresize neotree which-key counsel swiper ivy smooth-scrolling doom-modeline rainbow-mode pulsar move-text multiple-cursors markdown-mode yasnippet helpful doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
