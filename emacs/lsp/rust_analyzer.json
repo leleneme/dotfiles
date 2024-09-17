@@ -1,0 +1,31 @@
+{
+  "name": "rust-analyzer",
+  "languageId": "rust",
+  "command": ["rust-analyzer"],
+  "settings": {},
+  "capabilities": {
+    "textDocument": {
+      "hover": {
+        "contentFormat": ["markdown"]
+      }
+    }
+  },
+  "initializationOptions": {
+    "enableExperimental": false,
+    "diagnostics": {
+      "enable": true
+    },
+    "cargo": {
+      "autoreload": true,
+      "buildScripts": {
+        "enable": true,
+      }
+    },
+    "procMacro": {
+      "enable": true
+    },
+    "lens": {
+      "enable": false
+    }
+  }
+}

@@ -210,6 +210,8 @@
 (define-key lsp-bridge-mode-map (kbd "C-c l u") 'lsp-bridge-find-references)
 (define-key lsp-bridge-mode-map (kbd "C-<tab>") 'lsp-bridge-popup-complete-menu)
 
+(setq lsp-bridge-user-langserver-dir (concat user-emacs-directory "lsp/"))
+
 (use-package multiple-cursors)
 (global-set-key (kbd "C-c c r") 'mc/edit-lines)
 (global-set-key (kbd "C-.") 'mc/mark-next-like-this)
