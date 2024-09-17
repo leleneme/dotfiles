@@ -183,6 +183,10 @@
 ;; EXTERNAL PACKAGES
 (setq use-package-always-ensure t)
 
+(use-package yascroll)
+(setq yascroll:delay-to-hide 1)
+(global-yascroll-bar-mode 1)
+
 (use-package helpful)
 (global-set-key (kbd "C-h f") 'helpful-callable)
 (global-set-key (kbd "C-h v") 'helpful-variable)
@@ -343,7 +347,7 @@
  '(lsp-bridge-python-lsp-server "pyright")
  '(lua-prefix-key "C-c")
  '(package-selected-packages
-   '(meson-mode rust-mode lua-mode dashboard vterm windresize neotree which-key counsel swiper ivy smooth-scrolling doom-modeline rainbow-mode pulsar move-text multiple-cursors markdown-mode yasnippet helpful doom-themes)))
+   '(yascroll meson-mode rust-mode lua-mode dashboard vterm windresize neotree which-key counsel swiper ivy smooth-scrolling doom-modeline rainbow-mode pulsar move-text multiple-cursors markdown-mode yasnippet helpful doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
