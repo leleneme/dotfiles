@@ -131,6 +131,17 @@
 (bind-key* (kbd "C-c r") 'windresize)
 (bind-key* (kbd "C-c a t") 'lena/cycle-theme)
 
+(defun lena/open-terminal ()
+  (interactive)
+  (defun lena/split-window-below-70-30 ()
+    (let ((proportion (* 6 0.1)))
+      (split-window-below (round (* proportion (window-height))))))
+  (lena/split-window-below-70-30)
+  (other-window 1)
+  (vterm))
+
+(bind-key (kbd "C-'") 'lena/open-terminal)
+
 (defun lena/custom-home-key ()
   "If cursor is already at the begging of the line jump back to indentation, otherwise go to beggining"
   (interactive)
